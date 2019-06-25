@@ -1,0 +1,14 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity gameover_detector is
+	port( game_over1, game_over2 : in std_logic;
+			gameover : out std_logic
+		 );
+end entity;
+
+architecture behaviour of gameover_detector is
+begin
+	gameover <= game_over1 OR game_over2;
+end architecture;

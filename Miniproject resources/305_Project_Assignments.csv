@@ -1,0 +1,86 @@
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+# Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+# File: C:\Users\Tomas\Documents\Quartus_git\305Game\Miniproject resources\305_Project_Assignments.csv
+# Generated on: Thu May 09 12:07:38 2019
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair
+bt1,Input,PIN_G3,1,B1_N0,PIN_G3,,,,,
+bt2,Input,PIN_H2,1,B1_N1,PIN_H2,,,,,
+clk,Input,PIN_G21,6,B6_N1,PIN_G21,,,,,
+horiz_sync_out,Output,PIN_L21,6,B6_N1,PIN_L21,,,,,
+LEDG[0],Output,PIN_J1,1,B1_N1,PIN_J1,,,,,
+SW[8],Input,PIN_E4,1,B1_N0,PIN_E4,,,,,
+SW[7],Input,PIN_E3,1,B1_N0,PIN_E3,,,,,
+SW[6],Input,PIN_H7,1,B1_N0,PIN_H7,,,,,
+SW[5],Input,PIN_J7,1,B1_N1,PIN_J7,,,,,
+SW[4],Input,PIN_G5,1,B1_N0,PIN_G5,,,,,
+SW[3],Input,PIN_G4,1,B1_N0,PIN_G4,,,,,
+SW[2],Input,PIN_H6,1,B1_N0,PIN_H6,,,,,
+SW[1],Input,PIN_H5,1,B1_N0,PIN_H5,,,,,
+SW[0],Input,PIN_J6,1,B1_N0,PIN_J6,,,,,
+vert_sync_out,Output,PIN_L22,6,B6_N1,PIN_L22,,,,,
+VGA_B[3],Output,PIN_K18,6,B6_N1,PIN_K18,,,,,
+VGA_B[2],Output,PIN_J22,6,B6_N1,PIN_J22,,,,,
+VGA_B[1],Output,PIN_K21,6,B6_N1,PIN_K21,,,,,
+VGA_B[0],Output,PIN_K22,6,B6_N1,PIN_K22,,,,,
+VGA_G[3],Output,PIN_J21,6,B6_N1,PIN_J21,,,,,
+VGA_G[2],Output,PIN_K17,6,B6_N1,PIN_K17,,,,,
+VGA_G[1],Output,PIN_J17,6,B6_N0,PIN_J17,,,,,
+VGA_G[0],Output,PIN_H22,6,B6_N1,PIN_H22,,,,,
+VGA_R[3],Output,PIN_H21,6,B6_N1,PIN_H21,,,,,
+VGA_R[2],Output,PIN_H20,6,B6_N0,PIN_H20,,,,,
+VGA_R[1],Output,PIN_H17,6,B6_N0,PIN_H17,,,,,
+VGA_R[0],Output,PIN_H19,6,B6_N0,PIN_H19,,,,,
+blue_out,Unknown,PIN_K21,6,B6_N1,,,,,,
+green_out,Unknown,PIN_J17,6,B6_N0,,,,,,
+mouse_clk,Unknown,PIN_P22,5,B5_N0,,,,,,
+mouse_data,Unknown,PIN_P21,5,B5_N0,,,,,,
+red_out,Unknown,PIN_H17,6,B6_N0,,,,,,
+seg0_dec,Unknown,PIN_D13,7,B7_N1,,,,,,
+seg1_dec,Unknown,PIN_B15,7,B7_N1,,,,,,
+seg1[0],Unknown,PIN_A13,7,B7_N1,,,,,,
+seg1[1],Unknown,PIN_B13,7,B7_N1,,,,,,
+seg1[2],Unknown,PIN_C13,7,B7_N1,,,,,,
+seg1[3],Unknown,PIN_A14,7,B7_N1,,,,,,
+seg1[4],Unknown,PIN_B14,7,B7_N1,,,,,,
+seg1[5],Unknown,PIN_E14,7,B7_N1,,,,,,
+seg1[6],Unknown,PIN_A15,7,B7_N1,,,,,,
+seg0[0],Unknown,PIN_E11,7,B7_N1,,,,,,
+seg0[1],Unknown,PIN_F11,7,B7_N1,,,,,,
+seg0[2],Unknown,PIN_H12,7,B7_N1,,,,,,
+seg0[3],Unknown,PIN_H13,7,B7_N1,,,,,,
+seg0[4],Unknown,PIN_G12,7,B7_N1,,,,,,
+seg0[5],Unknown,PIN_F12,7,B7_N1,,,,,,
+seg0[6],Unknown,PIN_F13,7,B7_N1,,,,,,
+LEDG[8],Unknown,PIN_B2,1,B1_N0,,,,,,
+LEDG[7],Unknown,PIN_C2,1,B1_N0,,,,,,
+LEDG[6],Unknown,PIN_C1,1,B1_N0,,,,,,
+LEDG[5],Unknown,PIN_E1,1,B1_N0,,,,,,
+LEDG[4],Unknown,PIN_F2,1,B1_N0,,,,,,
+LEDG[3],Unknown,PIN_H1,1,B1_N1,,,,,,
+LEDG[2],Unknown,PIN_J3,1,B1_N1,,,,,,
+LEDG[1],Unknown,PIN_J2,1,B1_N1,,,,,,
+SW[9],Unknown,PIN_D2,1,B1_N0,,,,,,
+seg2[0],Unknown,PIN_D15,7,B7_N0,,,,,,
+seg2[1],Unknown,PIN_A16,7,B7_N1,,,,,,
+seg2[2],Unknown,PIN_B16,7,B7_N1,,,,,,
+seg2[3],Unknown,PIN_E15,7,B7_N0,,,,,,
+seg2[4],Unknown,PIN_A17,7,B7_N1,,,,,,
+seg2[5],Unknown,PIN_B17,7,B7_N1,,,,,,
+seg2[6],Unknown,PIN_F14,7,B7_N0,,,,,,
+bt0,Unknown,PIN_F1,1,B1_N0,,,,,,

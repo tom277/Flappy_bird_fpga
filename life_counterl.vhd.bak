@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity life_counter is
+	port( collision, clk : in std_logic;
+		   life : out std_logic_vector(3 downto 0)
+		  );
+end entity;
+
+architecture behaviour of life_counter is
+begin
+	process (clk)
+	variable count : integer range 0 to 5 := 5;
+	begin
+		if(rising_edge(clk)) then
+			

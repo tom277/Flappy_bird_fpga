@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity text_controller is
+	port (
+		Clk   : in std_logic;
+		pixel_row, pixel_column : in std_logic_vector(9 downto 0);
+		address						: out std_logic_vector(5 downto 0)
+	);
+end entity text_controller;
+
+architecture behaviour of text_controller is
+begin 
+process(Clk, pixel_row, pixel_column) is
+begin 
+	if (pixel_row >= 0 and pixel_row < 16 and pixel_column >= 0  and pixel_column < 16) then
+		address <= "111111";
+	end if;
+end process;
+end architecture;

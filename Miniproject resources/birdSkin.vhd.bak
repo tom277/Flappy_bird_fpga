@@ -1,0 +1,40 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.all;
+--USE  IEEE.STD_LOGIC_ARITH.all;
+--USE  IEEE.STD_LOGIC_UNSIGNED.all;
+use ieee.numeric_std.all;
+
+entity birdSkin is 
+port (bird_n : in std_LOGIC;
+		bird : in STD_LOGIC_VECTOR(11 DOWNTO 0);
+		clk : in std_logic;
+		pixel_row : in std_logic_vector(9 downto 0);
+		pixel_column : in std_logic_vector(9 downto 0);
+		);
+end colorMux;
+
+
+architecture arc1 of colorMux is 
+signal imgPixelAdr : STD_LOGIC_VECTOR (14 DOWNTO 0);
+signal activePixel : STD_LOGIC_VECTOR (11 DOWNTO 0);
+signal activeRed : STD_LOGIC_VECTOR (3 downto 0) := "1111";
+signal activeGreen : STD_LOGIC_VECTOR (3 downto 0) := "1111";
+signal activeBlue : STD_LOGIC_VECTOR (3 downto 0) := "1111";
+component bgrom IS
+	PORT
+	(
+		address		: IN STD_LOGIC_VECTOR (14 DOWNTO 0);
+		clock		: IN STD_LOGIC  := '1';
+		q		: OUT STD_LOGIC_VECTOR (11 DOWNTO 0)
+	);
+END component bgrom;
+
+
+begin 
+	bgrom1:bgrom port map(
+	 address => imgPixelAdr,
+	 clock => clk,
+	 q => activePixel
+	);
+	
+end architecture;

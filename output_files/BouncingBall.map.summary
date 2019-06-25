@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed May 29 23:41:29 2019
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Revision Name : BouncingBall
+Top-level Entity Name : BouncingBall
+Family : Cyclone III
+Total logic elements : 2,249
+    Total combinational functions : 2,150
+    Dedicated logic registers : 434
+Total registers : 434
+Total pins : 56
+Total virtual pins : 0
+Total memory bits : 247,808
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

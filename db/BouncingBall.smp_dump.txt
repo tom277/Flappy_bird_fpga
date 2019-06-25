@@ -1,0 +1,15 @@
+
+State Machine - |BouncingBall|fsm:inst18|state
+Name state.s_game state.s_train state.s_menu 
+state.s_menu 0 0 0 
+state.s_train 0 1 1 
+state.s_game 1 0 1 
+
+State Machine - |BouncingBall|MOUSE:inst4|mouse_state
+Name mouse_state.INPUT_PACKETS mouse_state.WAIT_CMD_ACK mouse_state.WAIT_OUTPUT_READY mouse_state.LOAD_COMMAND2 mouse_state.LOAD_COMMAND mouse_state.INHIBIT_TRANS 
+mouse_state.INHIBIT_TRANS 0 0 0 0 0 0 
+mouse_state.LOAD_COMMAND 0 0 0 0 1 1 
+mouse_state.LOAD_COMMAND2 0 0 0 1 0 1 
+mouse_state.WAIT_OUTPUT_READY 0 0 1 0 0 1 
+mouse_state.WAIT_CMD_ACK 0 1 0 0 0 1 
+mouse_state.INPUT_PACKETS 1 0 0 0 0 1 

@@ -1,0 +1,60 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity pipe is
+	generic (initialX : integer range 0 to 640 := 600);
+	port (vert_sync_out : in std_logic;
+			rand_num : in std_logic_vector(9 downto 0);
+			pixel_row : in std_logic_vector(9 downto 0);
+			pixel_column : in std_logic_vector(9 downto 0);
+			rgb : out std_logic_vector (11 downto 0);
+			enable : out std_logic
+			);
+end entity;
+
+architecture arch1 of pipe is
+constant pipe_width : integer range 0 to 50 := 50;
+constant pipe_gap : integer range 0 to 80 := 80;
+signal toggleRand : std_logic := '1';
+signal randomizer : unsigned (9 downto 0) := "1010011110";
+begin
+	random : process 
+	begin
+		wait until toggleRand'event AND toggleRand = '1';
+		randomizer <=(unsigned(rand_num));
+	end process random;
+
+	drawing : process(pixel_column,pixel_row)
+	variable x_pos_left : integer range -60 to 650 := 600;
+	variable y_pos_tophalf : integer range 0 to 400 := 200;
+	--variable randomizer : integer range 0 to 1023 := 670;
+   --variable x_pos_left : signed(10 downto 0) := to_signed(600,11);
+	--variable y_pos_tophalf : signed(10 downto 0) := to_signed(200,11);
+	begin
+		x_pos_left := initialX;
+		y_pos_tophalf := (to_integer(randomizer)/10)*3;
+		
+		if(signed('0' & pixel_column) >= (to_signed(x_pos_left,11)))AND(signed('0' & pixel_column) <= (to_signed(x_pos_left+pipe_width,11)))
+		AND((signed('0'&pixel_row) <= (to_signed(y_pos_tophalf,11)))OR(signed('0'&pixel_row) >= (to_signed(y_pos_tophalf+pipe_gap,11))))then
+	   --if('0'&signed(pixel_column) >=(x_pos_left)AND('0'&signed(pixel_column) <= x_pos_left+to_signed(pipe_width,11))
+		--AND(('0'&signed(pixel_row) <= y_pos_tophalf)OR('0'&signed(pixel_row) >= y_pos_tophalf+to_signed(pipe_gap,11))))then	
+			rgb <= "000011110000";
+			enable <= '1';
+		else 
+			rgb <= "000000000000";
+			enable <= '0';
+		end if;
+			
+		if(vert_sync_out'event and vert_sync_out = '1') then
+			if(x_pos_left <= -50) then
+				x_pos_left := 641;
+				toggleRand <= '1';
+			else
+				x_pos_left := x_pos_left - 1;
+				toggleRand <= '0';
+			end if;	
+		end if;
+	end process drawing;	
+end architecture;

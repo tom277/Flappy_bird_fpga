@@ -1,0 +1,47 @@
+--library ieee;
+--use ieee.std_logic_1164.all;
+--use ieee.std_logic_unsigned.all;
+--use ieee.numeric_std.all;
+--
+--entity gift is
+--	generic (initialX : integer range 0 to 525 := 524;
+--				color : std_logic_vector := "110011001100");
+--	port (vert_sync_out : in std_logic;
+--			--rand_num : in std_logic_vector(9 downto 0);
+--			pixel_row : in std_logic_vector(9 downto 0);
+--			pixel_column : in std_logic_vector(9 downto 0);
+--			--ball_x_pos, ball_y_posin : in std_logic_vector(9 downto 0);
+--			--ball_size : in std_logic_vector(9 downto 0);
+--			--test_ball_enable : in std_logic;
+--			clk : in std_logic;
+--			rgb : out std_logic_vector (11 downto 0);
+--			enable : out std_logic;
+--			--collision : out std_logic;
+--			--score_out : out std_logic;
+--			game_enable, reset : in std_logic
+--			);
+--end entity;
+--
+--architecture behvaiour of gift is
+--begin
+--	process(clk, vert_sync_out,pixel_column,pixel_row)
+--	variable gift_width : integer range 0 to 16 := 16;
+--	variable int_xpos : integer range -32 to 641 := initialX;
+--	begin
+--		if(((signed('0'&pixel_row) >= to_signed(240,11)) AND (signed('0'&pixel_row) < to_signed((240+gift_width),11))) 
+--		AND ((signed('0'&pixel_column) >= to_signed(int_xpos,11)) AND (signed('0'&pixel_column) < to_signed((int_xpos+gift_width),11)))) then
+--			enable <= '1' and game_enable;
+--		else
+--			enable <= '0';
+--		end if;
+--		rgb <= color;
+--		if (vert_sync_out'event and vert_sync_out = '1') then
+--			if(int_xpos < -16) then
+--				int_xpos := 641;
+--			else
+--				int_xpos := int_xpos - 1;
+--			end if;
+--		end if;
+--	end process;
+--end architecture;
+--	

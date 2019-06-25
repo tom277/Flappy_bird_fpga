@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed May 29 23:42:05 2019
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Revision Name : BouncingBall
+Top-level Entity Name : BouncingBall
+Family : Cyclone III
+Device : EP3C16F484C6
+Timing Models : Final
+Total logic elements : 2,236 / 15,408 ( 15 % )
+    Total combinational functions : 2,151 / 15,408 ( 14 % )
+    Dedicated logic registers : 434 / 15,408 ( 3 % )
+Total registers : 434
+Total pins : 56 / 347 ( 16 % )
+Total virtual pins : 0
+Total memory bits : 247,808 / 516,096 ( 48 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )
