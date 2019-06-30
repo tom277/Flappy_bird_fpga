@@ -1,6 +1,6 @@
 # Flappy_bird_fpga
 
-The game needs to be run on a cyclone III fpga board and compiled using Quartus II
+The game needs to be run on a cyclone III fpga DE0 board and compiled using Quartus II
 
 
 
